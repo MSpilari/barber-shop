@@ -9,7 +9,11 @@ module.exports = {
     './src/components/**/*.tsx'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        home: 'url("../src/assets/bg_home.svg")'
+      }
+    }
   },
   plugins: []
 }
