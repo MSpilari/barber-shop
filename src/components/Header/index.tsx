@@ -4,10 +4,10 @@ import frenchBarberLogo from '../../assets/french_barber_logo.svg'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const currentDate = new Date()
   return (
     <header
-      className="flex items-center justify-between text-white mx-7 mt-8 p-0 w-80 h-8 gap-32 absolute top-0 
+      className="flex items-center justify-between text-white mx-7 mt-8 p-0 w-80 h-8 gap-32 absolute top-0 z-10 
     lg:py-11 lg:px-24 lg:gap-44 lg:w-full lg:h-32"
     >
       <Image
@@ -17,12 +17,18 @@ const Header = () => {
       />
 
       {isOpen && (
-        <ul className="w-80 h-80 flex flex-col items-center p-0 gap-12 absolute top-28 text-2xl uppercase lg:hidden">
+        <ul
+          className="w-80 flex flex-col items-center justify-center p-0 gap-12 rounded absolute top-9 text-2xl uppercase bg-black
+        lg:hidden"
+        >
           <li>Our Services</li>
           <li>Our Products</li>
           <li>Our Prices</li>
           <li>Our Lounges</li>
           <li className="text-orange-400">Appointments</li>
+          <li className="text-xs text-center">
+            ₢ {currentDate.getFullYear()} The French Barber
+          </li>
         </ul>
       )}
 
