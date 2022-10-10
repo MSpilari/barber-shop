@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         home: 'url("../src/assets/bg_home.svg")'
+      },
+      fontFamily: {
+        Roboto: 'Roboto, sans-serif'
       }
     }
   },
