@@ -14,7 +14,8 @@ module.exports = {
         home: 'url("../src/assets/bg_home.svg")'
       },
       fontFamily: {
-        Roboto: 'Roboto, sans-serif'
+        Roboto: 'Roboto, sans-serif',
+        russoOne: 'Russo One, sans-serif'
       }
     }
   },
