@@ -7,7 +7,7 @@ const Header = () => {
   const currentDate = new Date()
   return (
     <header
-      className="flex items-center justify-between text-white mx-7 mt-8 p-0 w-80 h-8 gap-32 absolute top-0 z-10 
+      className="flex items-center justify-between text-white mx-7 mt-8 p-0 w-80 h-8 gap-32 absolute top-0 z-10 overflow-hidden 
     lg:py-11 lg:px-24 lg:gap-44 lg:w-full lg:h-32"
     >
       <Image
@@ -44,11 +44,15 @@ const Header = () => {
           !isOpen && 'border-solid border border-orange-400'
         } rounded-full font-normal text-xs uppercase text-orange-400 lg:hidden`}
         onClick={() => setIsOpen(!isOpen)}
+        type="button"
       >
         {isOpen ? 'Close' : 'Menu'}
       </button>
 
-      <button className="hidden lg:flex text-orange-400 text-sm uppercase">
+      <button
+        type="button"
+        className="hidden lg:flex text-orange-400 text-sm uppercase w-28"
+      >
         Appointments
       </button>
     </header>
