@@ -1,7 +1,7 @@
 const Welcome = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center gap-12 mt-24 w-80 h-[calc(100vh_-_4rem)] 
+      className="flex flex-col items-center justify-center gap-12 mt-24 w-80 h-[calc(100vh_-_6rem)] 
     lg:mt-40 lg:w-[31rem] lg:h-[calc(100vh_-_10rem)]"
     >
       <span className="text-white font-normal font-Roboto text-center text-xs lg:text-base">
