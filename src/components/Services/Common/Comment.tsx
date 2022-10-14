@@ -1,12 +1,18 @@
 type CommentTypes = {
   title: string
+  extraStylesDiv?: string
+  extraStylesSpan?: string
+  extraStylesParag?: string
+  extraStylesButton?: string
 }
 
-const Comment = ({ title }: CommentTypes) => {
+const Comment = ({ title, extraStylesDiv }: CommentTypes) => {
   const [firstWord, secondWord] = title.split(' ')
 
   return (
-    <div className="w-80 h-80 flex flex-col items-center gap-8 lg:w-96 lg:h-96 lg:gap-12 xl:items-end">
+    <div
+      className={`w-80 h-80 flex flex-col items-center gap-8 lg:w-96 lg:h-96 lg:gap-12 xl:items-end ${extraStylesDiv}`}
+    >
       <span className="text-3xl uppercase lg:text-6xl">
         {firstWord} <span className="text-orange-400">{secondWord}</span>
       </span>
