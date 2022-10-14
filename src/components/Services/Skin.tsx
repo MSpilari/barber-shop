@@ -9,24 +9,27 @@ const SkinService = () => {
     <section className="w-full flex flex-col overflow-x-hidden">
       <SectionBadge title="Skin Care" />
 
-      <div className="z-10 flex flex-col items-center justify-center lg:flex-row-reverse">
-        <div className="relative w-80 h-80 flex lg:w-1/2 lg:h-[50rem]">
+      <div className="z-10 flex flex-col items-center justify-center lg:flex-row-reverse lg:relative lg:h-[50rem]">
+        <div className="relative w-80 h-80 flex lg:static">
           <Image
             src={skin_1}
-            className="w-40 h-40 absolute z-10 left-0 top-24 lg:w-80 lg:h-80 lg:-left-40 xl:left-0 lg:top-64"
+            className="w-16 h-32 absolute z-10 right-12 top-24 lg:w-36 lg:h-80 lg:right-0 lg:z-0 xl:right-40"
             alt="skin_1 Pic"
             sizes="50vw"
           />
 
           <Image
             src={skin_2}
-            className="w-60 absolute right-0 -top-5 lg:w-[33.75rem] lg:-top-7"
+            className="w-60 absolute left-0 -top-5 lg:w-[33.75rem] lg:-top-7 xl:left-40"
             alt="skin_2 Pic"
             sizes="50vw"
           />
         </div>
 
-        <Comment title="The Skin" />
+        <Comment
+          extraStylesDiv="lg:absolute lg:left-[35rem] xl:left-[40rem]"
+          title="The Skin"
+        />
       </div>
     </section>
   )
