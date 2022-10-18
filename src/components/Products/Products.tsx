@@ -11,7 +11,7 @@ const Products = () => {
   ]
 
   return (
-    <section className="grid h-[35rem] grid-rows-3 grid-cols-1 items-center justify-center lg:grid-rows-2 lg:h-[45rem]">
+    <section className="grid h-[35rem] grid-rows-3 grid-cols-1 items-center justify-center lg:grid-rows-2 lg:h-[45rem] lg:mb-36">
       <h1 className="text-3xl uppercase text-center mt-5 lg:text-6xl lg:mt-0 lg:row-start-1 lg:text-start">
         Our Products
       </h1>
