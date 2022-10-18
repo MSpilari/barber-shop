@@ -1,7 +1,7 @@
 const Quote = () => {
   return (
     <section
-      className="bg-orange-400 w-full h-[43rem] flex flex-col items-center justify-center py-16 gap-16
+      className="bg-orange-400 w-full h-[43rem] mb-24 flex flex-col items-center justify-center py-16 gap-16
       lg:flex-row lg:py-24 lg:gap-32 lg:h-[34.3rem]"
     >
       <div className="flex flex-col items-start gap-12 h-96 lg:w-[35rem] lg:h-60">
