@@ -3,7 +3,7 @@ import artistsPic from '../../assets/artists.png'
 
 const Artists = () => {
   return (
-    <section className="w-full flex flex-col items-center relative">
+    <section className="w-full h-[73rem] mb-20 flex flex-col items-center relative">
       <div className="flex flex-col items-center justify-center gap-12 w-80 h-72 z-10 lg:w-[37rem] lg:h-72 ">
         <h1 className="text-3xl uppercase text-center lg:text-6xl">
           Our Artists
