@@ -1,6 +1,16 @@
+import { RefObject, useRef } from 'react'
 import { CardPrice } from './CardPrice'
 
 const Prices = () => {
+  const carouselSlider = useRef<HTMLDivElement>(null)
+
+  const scrolling = (element: RefObject<HTMLDivElement>, btn?: string) => {
+    let direction = (btn === 'start' && -288) || (btn === 'end' && 900) || 314.5
+
+    if (element.current)
+      element.current.scrollTo({ behavior: 'smooth', left: direction })
+  }
+
   return (
     <section className="flex flex-col items-center justify-center w-full h-[52rem] gap-24">
       <div className="flex flex-col items-center w-80 h-36 gap-12">
@@ -15,7 +25,10 @@ const Prices = () => {
       </div>
 
       <div className="w-full h-[38rem]">
-        <div className="w-full flex overflow-x-scroll">
+        <div
+          ref={carouselSlider}
+          className="w-full flex overflow-x-hidden gap-10 px-2"
+        >
           <CardPrice
             title="Hairstyle"
             price={30}
@@ -51,9 +64,18 @@ const Prices = () => {
         </div>
 
         <div className="flex items-center justify-center gap-4 mt-4">
-          <button className="w-5 h-1 bg-slate-400"></button>
-          <button className="w-5 h-1 bg-slate-400"></button>
-          <button className="w-5 h-1 bg-slate-400"></button>
+          <button
+            onClick={() => scrolling(carouselSlider, 'start')}
+            className="w-5 h-1 bg-slate-400"
+          />
+          <button
+            onClick={() => scrolling(carouselSlider)}
+            className="w-5 h-1 bg-slate-400"
+          />
+          <button
+            onClick={() => scrolling(carouselSlider, 'end')}
+            className="w-5 h-1 bg-slate-400"
+          />
         </div>
       </div>
     </section>
