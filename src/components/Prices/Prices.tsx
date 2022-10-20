@@ -1,15 +1,9 @@
-import { RefObject, useRef } from 'react'
+import { useRef } from 'react'
+import { CarouselButtons } from '../Carousel/CarouselButtons'
 import { CardPrice } from './CardPrice'
 
 const Prices = () => {
   const carouselSlider = useRef<HTMLDivElement>(null)
-
-  const scrolling = (element: RefObject<HTMLDivElement>, btn?: string) => {
-    let direction = (btn === 'start' && -288) || (btn === 'end' && 900) || 314.5
-
-    if (element.current)
-      element.current.scrollTo({ behavior: 'smooth', left: direction })
-  }
 
   return (
     <section className="flex flex-col items-center justify-center w-full h-[52rem] gap-24">
@@ -27,7 +21,7 @@ const Prices = () => {
       <div className="w-full h-[38rem]">
         <div
           ref={carouselSlider}
-          className="w-full flex overflow-x-hidden gap-10 px-2"
+          className="w-full flex overflow-hidden gap-10 px-2 lg:items-center lg:justify-center lg:gap-0"
         >
           <CardPrice
             title="Hairstyle"
@@ -38,6 +32,7 @@ const Prices = () => {
               'Haircut',
               'Fixation'
             ]}
+            extraCssDiv="lg:w-72 lg:h-[30rem] lg:rotate-[-10deg] lg:left-10 hover:z-20 xl:w-96"
           />
 
           <CardPrice
@@ -50,6 +45,7 @@ const Prices = () => {
               'Beard trimming and trimming',
               'Fixation'
             ]}
+            extraCssDiv="lg:w-80 lg:z-10 xl:w-96"
           />
 
           <CardPrice
@@ -60,23 +56,16 @@ const Prices = () => {
               'Beard trimming and trimming',
               'Fixation'
             ]}
+            extraCssDiv="lg:w-72 lg:h-[30rem] lg:rotate-[10deg] hover:z-20 xl:w-96"
           />
         </div>
 
-        <div className="flex items-center justify-center gap-4 mt-4">
-          <button
-            onClick={() => scrolling(carouselSlider, 'start')}
-            className="w-5 h-1 bg-slate-400"
-          />
-          <button
-            onClick={() => scrolling(carouselSlider)}
-            className="w-5 h-1 bg-slate-400"
-          />
-          <button
-            onClick={() => scrolling(carouselSlider, 'end')}
-            className="w-5 h-1 bg-slate-400"
-          />
-        </div>
+        <CarouselButtons
+          slider={carouselSlider}
+          startPos={-288}
+          middlePos={314.5}
+          endPos={900}
+        />
       </div>
     </section>
   )
