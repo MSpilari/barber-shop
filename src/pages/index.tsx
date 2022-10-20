@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { Artists } from '../components/Artists/Artists'
+import { Contact } from '../components/Contact/Contact'
 import { Header } from '../components/Header'
 import { HomeBg } from '../components/HomeBg'
 import { Prices } from '../components/Prices/Prices'
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <Quote />
       <Artists />
       <Prices />
+      <Contact />
     </main>
   )
 }
