@@ -7,7 +7,7 @@ import { SectionBadge } from './Common/SectionBadge'
 const SkinService = () => {
   return (
     <section className="w-full flex flex-col overflow-x-hidden">
-      <SectionBadge title="Skin Care" />
+      <SectionBadge title="Skin Care" extraStyleDiv="rotate-2" />
 
       <div className="z-10 flex flex-col items-center justify-center lg:flex-row-reverse lg:relative lg:h-[50rem]">
         <div className="relative w-80 h-80 flex lg:static">

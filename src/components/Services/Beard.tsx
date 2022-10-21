@@ -7,7 +7,10 @@ import { SectionBadge } from './Common/SectionBadge'
 const BeardService = () => {
   return (
     <section className="w-full flex flex-col overflow-x-hidden">
-      <SectionBadge first title="Shave & Cut" />
+      <SectionBadge
+        title="Shave & Cut"
+        extraStyleDiv="bg-orange-400 -rotate-2"
+      />
 
       <div className="z-10 flex flex-col items-center justify-center lg:flex-row-reverse">
         <div className="relative w-80 h-80 flex lg:w-1/2 lg:h-[50rem]">

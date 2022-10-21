@@ -7,7 +7,7 @@ import cut_2 from '../../assets/cut_2.png'
 const Hairstyle = () => {
   return (
     <section className="w-full flex flex-col overflow-x-hidden">
-      <SectionBadge title="Hairstyle & Color" />
+      <SectionBadge title="Hairstyle & Color" extraStyleDiv="-rotate-2" />
 
       <div className="z-10 flex flex-col items-center justify-center lg:flex-row-reverse">
         <div className="relative w-80 h-80 flex lg:w-1/2 lg:h-[50rem]">
