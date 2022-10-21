@@ -1,14 +1,12 @@
 type SectionBadgeTypes = {
-  first?: boolean
   title: string
+  extraStyleDiv?: string
 }
 
-const SectionBadge = ({ first, title }: SectionBadgeTypes) => {
+const SectionBadge = ({ title, extraStyleDiv }: SectionBadgeTypes) => {
   return (
     <div
-      className={`${
-        first && 'bg-orange-400'
-      } h-20 text-5xl mt-4 uppercase flex items-center justify-center whitespace-nowrap -rotate-2 lg:text-8xl lg:h-24 lg:mt-6`}
+      className={`h-20 text-5xl mt-4 uppercase flex items-center justify-center whitespace-nowrap lg:text-8xl lg:h-24 lg:mt-6 ${extraStyleDiv}`}
     >
       {title}
     </div>
