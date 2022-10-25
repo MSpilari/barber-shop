@@ -18,9 +18,12 @@ const SocialMediaIcons = () => {
       {iconsList.map((icon, index) => (
         <li
           key={index}
-          className="w-14 h-14 flex items-center justify-center text-xl border border-solid border-black rounded-full"
+          className="w-14 h-14 flex items-center justify-center text-xl border border-solid border-black rounded-full
+          hover:text-orange-400 hover:border-orange-400"
         >
-          {icon}
+          <button className="w-full h-full flex items-center justify-center">
+            {icon}
+          </button>
         </li>
       ))}
     </ul>
