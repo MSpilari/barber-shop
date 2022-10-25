@@ -1,6 +1,8 @@
 import Image from 'next/future/image'
 import { useState } from 'react'
 import frenchBarberLogo from '../../assets/french_barber_logo.svg'
+import { DropdownMenuMobile } from './DropdownMenuMobile'
+import { MenuDesktop } from './MenuDesktop'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,28 +18,9 @@ const Header = () => {
         alt="French Barber logo"
       />
 
-      {isOpen && (
-        <ul
-          className="w-80 flex flex-col items-center justify-center p-0 gap-12 rounded absolute top-9 text-2xl uppercase bg-black
-        lg:hidden"
-        >
-          <li>Our Services</li>
-          <li>Our Products</li>
-          <li>Our Prices</li>
-          <li>Our Lounges</li>
-          <li className="text-orange-400">Appointments</li>
-          <li className="text-xs text-center">
-            ₢ {currentDate.getFullYear()} The French Barber
-          </li>
-        </ul>
-      )}
+      {isOpen && <DropdownMenuMobile />}
 
-      <ul className="hidden lg:flex lg:items-start lg:gap-8 lg:text-sm lg:uppercase">
-        <li>Our Services</li>
-        <li>Our Products</li>
-        <li>Our Prices</li>
-        <li>Our Lounges</li>
-      </ul>
+      <MenuDesktop />
 
       <button
         className={`w-24 h-8 ${
