@@ -14,6 +14,12 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="shortcut icon"
+          sizes="32x32"
+          href="/Logo.png"
+          type="image/png"
+        />
       </Head>
       <body>
         <Main />
